@@ -10,7 +10,8 @@ LoginPage.prototype = Object.create({},{
     passwordField: {get: function () { return element(by.id('loginPassword'))}},
     rememberChkLbl: {get: function () { return element(by.css('#login-form > div.form-group.form-check > label'))}},
     rememberChk: {get: function () { return element(by.id('rememberLoginChk'))}},
-    submitBtn: {get: function () { return element(by.buttonText('Submit'))}},
+    submitBtn: {get: function () { return element(by.css('#login-form > button'))}},
+    loginErrorMsg: {get: function () { return element(by.id('login-alert'))}}
 
 })
 
