@@ -87,21 +87,70 @@ describe('Vote Tests', function () {
         loginPage.passwordField.sendKeys('pass')
         loginPage.submitBtn.click()
 
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(false)
+
         votePage.submitBtn.click()
         expect(votePage.xmenVal.getText()).toEqual('11')
+        expect(votePage.thanksAlertTxt.getText()).toEqual('Thanks for voting!')
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(true)
+        expect(votePage.voteFormSection.isDisplayed()).toBe(false)
     })
-    fit('should add 1 to Avengers votes', function () {
+    it('should add 1 to Avengers votes', function () {
         loginPage.emailField.sendKeys('test@test.com')
         loginPage.passwordField.sendKeys('pass')
         loginPage.submitBtn.click()
 
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(false)
+
         votePage.avengersRadio.click()
         votePage.submitBtn.click()
         expect(votePage.avengersVal.getText()).toEqual('6')
+        expect(votePage.thanksAlertTxt.getText()).toEqual('Thanks for voting!')
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(true)
+        expect(votePage.voteFormSection.isDisplayed()).toBe(false)
     })
 
-    it('', function () {
+    it('should add 1 to Deadpool votes', function () {
+        loginPage.emailField.sendKeys('test@test.com')
+        loginPage.passwordField.sendKeys('pass')
+        loginPage.submitBtn.click()
 
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(false)
+
+        votePage.deadpoolRadio.click()
+        votePage.submitBtn.click()
+        expect(votePage.deadpoolVal.getText()).toEqual('23')
+        expect(votePage.thanksAlertTxt.getText()).toEqual('Thanks for voting!')
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(true)
+        expect(votePage.voteFormSection.isDisplayed()).toBe(false)
+    })
+    it('should add 1 to Spider-Man votes', function () {
+        loginPage.emailField.sendKeys('test@test.com')
+        loginPage.passwordField.sendKeys('pass')
+        loginPage.submitBtn.click()
+
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(false)
+
+        votePage.spidermanRadio.click()
+        votePage.submitBtn.click()
+        expect(votePage.spidermanVal.getText()).toEqual('13')
+        expect(votePage.thanksAlertTxt.getText()).toEqual('Thanks for voting!')
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(true)
+        expect(votePage.voteFormSection.isDisplayed()).toBe(false)
+    })
+    it('should add 1 to Iron man votes', function () {
+        loginPage.emailField.sendKeys('test@test.com')
+        loginPage.passwordField.sendKeys('pass')
+        loginPage.submitBtn.click()
+
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(false)
+
+        votePage.ironmanRadio.click()
+        votePage.submitBtn.click()
+        expect(votePage.ironmanVal.getText()).toEqual('2')
+        expect(votePage.thanksAlertTxt.getText()).toEqual('Thanks for voting!')
+        expect(votePage.thanksAlertTxt.isDisplayed()).toBe(true)
+        expect(votePage.voteFormSection.isDisplayed()).toBe(false)
     })
 
 })

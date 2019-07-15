@@ -14,6 +14,7 @@ VotePage.prototype = Object.create({},{
     deadpoolRadio: {get: function () { return element(by.id('heroMovieRadio3'))}},
     spidermanRadio: {get: function () { return element(by.id('heroMovieRadio4'))}},
     ironmanRadio: {get: function () { return element(by.id('heroMovieRadio5'))}},
+    voteFormSection: {get: function () { return element(by.id('vote-form'))}},
 
     movieLbl: {get: function () { return element(by.css('body > div.container-fluid > div:nth-child(6) > div > table > thead > tr > th:nth-child(1)'))}},
     voteLbl: {get: function () { return element(by.css('body > div.container-fluid > div:nth-child(6) > div > table > thead > tr > th:nth-child(2)'))}},
@@ -26,7 +27,9 @@ VotePage.prototype = Object.create({},{
     spidermanLbl: {get: function () { return element(by.id('movieName4'))}},
     spidermanVal: {get: function () { return element(by.id('movieVotes4'))}},
     ironmanLbl: {get: function () { return element(by.id('movieName5'))}},
-    ironmanVal: {get: function () { return element(by.id('movieVotes5'))}}
+    ironmanVal: {get: function () { return element(by.id('movieVotes5'))}},
+
+    thanksAlertTxt:{get: function () { return element(by.id('vote-alert'))}}
 
 })
 

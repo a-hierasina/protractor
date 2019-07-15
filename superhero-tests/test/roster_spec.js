@@ -18,6 +18,10 @@ describe('Roster Tests', function () {
     })
 
     it('should display all roster elements', function () {
+        loginPage.emailField.sendKeys('test@test.com')
+        loginPage.passwordField.sendKeys('pass')
+        loginPage.submitBtn.click()
+
         expect(rosterPage.rosterTitleTxt.isDisplayed()).toBe(true)
         expect(rosterPage.rosterTitleTxt.getText()).toEqual('Build your Superhero Roaster:')
 
