@@ -1,7 +1,7 @@
 var VotePage = function () {}
 
 VotePage.prototype = Object.create({},{
-    voteTitleTxt: {get: function () { return element(by.css('body > div.container-fluid > div:nth-child(6) > div > h4'))}},
+    voteTitleTxt: {get: function () { return element(by.css('.container-fluid h4'))}},
     xmenRadioLbl: {get: function () { return element(by.css('#vote-form > div:nth-child(1) > label'))}},
     avengersRadioLbl: {get: function () { return element(by.css('#vote-form > div:nth-child(2) > label'))}},
     deadpoolRadioLbl: {get: function () { return element(by.css('#vote-form > div:nth-child(3) > label'))}},
@@ -16,8 +16,8 @@ VotePage.prototype = Object.create({},{
     ironmanRadio: {get: function () { return element(by.id('heroMovieRadio5'))}},
     voteFormSection: {get: function () { return element(by.id('vote-form'))}},
 
-    movieLbl: {get: function () { return element(by.css('body > div.container-fluid > div:nth-child(6) > div > table > thead > tr > th:nth-child(1)'))}},
-    voteLbl: {get: function () { return element(by.css('body > div.container-fluid > div:nth-child(6) > div > table > thead > tr > th:nth-child(2)'))}},
+    movieLbl: {get: function () { return element(by.css('table th:nth-child(1)'))}},
+    voteLbl: {get: function () { return element(by.css('table th:nth-child(2)'))}},
     xmenLbl: {get: function () { return element(by.id('movieName1'))}},
     xmenVal: {get: function () { return element(by.id('movieVotes1'))}},
     avengersLbl: {get: function () { return element(by.id('movieName2'))}},

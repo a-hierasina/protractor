@@ -1,7 +1,7 @@
 var RosterPage = function () {}
 
 RosterPage.prototype = Object.create({},{
-    rosterTitleTxt: {get: function () { return element(by.css('body > div.container-fluid > div:nth-child(4) > h3'))}},
+    rosterTitleTxt: {get: function () { return element(by.css('.container-fluid > div:nth-child(4) > h3'))}},
     wolverineItemTxt: {get: function () { return element(by.css('#hero-list > li:nth-child(1)'))}},
     ironManItemTxt: {get: function () { return element(by.css('#hero-list > li:nth-child(2)'))}},
     deadpoolItemTxt: {get: function () { return element(by.css('#hero-list > li:nth-child(3)'))}},
